@@ -1,0 +1,21 @@
+lab1/:
+total 436
+-rw------- 1 tyler.bieker students    112 Jun 23 19:37 hello.cpp
+-rw------- 1 tyler.bieker students 436316 Jun 20 18:05 Lab01.pdf
+-rw------- 1 tyler.bieker students    223 Jun 23 19:45 makefile
+#Author: Tyler Bieker
+#Assignment: Lab 1 makefile
+#Date: 06/23/2016
+
+CC= g++ -std=c++11
+FLAGS= -Wall -g -c
+
+myhello: hello.o
+	${CC} hello.o -o myhello
+ 
+hello.o: hello.cpp
+	${CC} ${FLAGS} hello.cpp
+
+clean:
+	rm *.o myhello
+
