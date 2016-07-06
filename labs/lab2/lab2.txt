@@ -1,0 +1,87 @@
+//Tyler Bieker
+//CS261 Lab 2
+//07/05/2016
+
+#include "arr.h"
+
+int sum(node * head[]){
+//compute and return the sum of the ints contained in the table
+    int arraySize = SIZE;
+    int total = 0;
+    node * listStart;
+
+    for(int x = 0; x < arraySize; x++){
+        listStart = head[x];
+        node * curr = listStart;
+        while(curr != nullptr){
+            total = total + curr->data;
+            curr = curr->next;
+        }
+    }
+    return total;
+}
+
+int removeTwo(node * head[]){
+//remove all the 2s from the table
+    int arraySize = SIZE;
+    int total = 0; //total 2s removed
+
+    node * listStart;
+
+    for(int x = 0; x < arraySize; x++){
+        listStart = head[x];
+        node * curr = listStart;
+        node * prev = nullptr;
+        node * temp;
+
+        while(curr != nullptr){
+            if(curr->data == 2){
+                if(prev == nullptr){ //head of list
+                    temp = curr;
+                    curr = curr->next;
+                    delete temp;
+                    temp = nullptr;
+                    head[x] = curr; //set head of list
+                    total++;
+                }else{
+                    temp = curr;
+                    curr = curr->next;
+                    prev->next = curr;
+                    delete temp;
+                    temp = nullptr;
+                    total++;
+                }
+            }else{
+                prev = curr;
+                curr = curr->next;
+            }
+        }
+    }
+    return total;
+}
+Here is the original list: Index 0:2 -> 13 -> 29 -> 2 -> 24 -> 2
+
+Index 1:2 -> 18 -> 16 -> 2 -> 26 -> 30 -> 24 -> 0 -> 2 -> 13 -> 23 -> 6 -> 2
+
+Index 2:2 -> 17 -> 25 -> 31 -> 2 -> 55 -> 26 -> 2
+
+Index 3:2 -> 8 -> 32 -> 0 -> 2 -> 55 -> 32 -> 2
+
+Index 4:2 -> 10 -> 7 -> 7 -> 2 -> 1 -> 10 -> 2
+
+This list contains 43 number of items 
+The sum of the array: 570
+The number of 2s remove: 16
+
+
+The resulting list is... Index 0:13 -> 29 -> 24
+
+Index 1:18 -> 16 -> 26 -> 30 -> 24 -> 0 -> 13 -> 23 -> 6
+
+Index 2:17 -> 25 -> 31 -> 55 -> 26
+
+Index 3:8 -> 32 -> 0 -> 55 -> 32
+
+Index 4:10 -> 7 -> 7 -> 1 -> 10
+
+This list contains 27 number of items 
