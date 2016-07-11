@@ -62,3 +62,21 @@ node * rRemoveTwo(node * curr, int& count){
         return nullptr;
     }
 }
+
+Here is the original list: 2 -> 0 -> 16 -> 62 -> 47 -> 61 -> 36 -> 11 -> 2 -> 53 -> 88 -> 47 -> 74 -> 21 -> 47 -> 7 -> 2
+
+This list contains 17 number of items
+Duplicate copy of the list:
+
+
+The resulting list is... 2 -> 0 -> 16 -> 62 -> 47 -> 61 -> 36 -> 11 -> 2 -> 53 -> 88 -> 47 -> 74 -> 21 -> 47 -> 7 -> 2
+
+This list contains 17 number of items
+The sum of all data is: 576
+Twos removed: 3
+
+
+The resulting list is... 0 -> 16 -> 62 -> 47 -> 61 -> 36 -> 11 -> 53 -> 88 -> 47 -> 74 -> 21 -> 47 -> 7
+
+This list contains 14 number of items
+The sum of all data is: 570
