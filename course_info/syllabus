@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link rel="stylesheet" type="text/css" href="/shared/css/TemplateFiles/stylesheet.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Syllabus</title>
+<style type="text/css">
+rightJustified {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div sizset="0" sizcache="1" id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<h1><img src="../images/icons/CourseInfo-yellow_64.png" />&nbsp;Course Information</h1>
+</div>
+<div sizset="0" sizcache="1" id="body">
+<h2>Syllabus</h2>
+<h3>Course Title: CS261 Programming Systems</h3>
+<h3>Instructor Information:</h3>
+<p><b>Instructor:</b> Li Liang<br /> <b>Email:</b> Use the link to "Email" within Desire2Learn (on the top left corner of the course navigation). This is the best way to reach me. <br /> <b>Office Location:</b> Sylvania TCB312</p>
+<hr size="2" width="100%" />
+<h3>Course Description</h3>
+<p>Explores the theory and practice of object-oriented programming as embodied in both Java and C++. Introduces inheritance, polymorphism, virtual functions, templates, exceptions, operator overloading and the extensive libraries that are available as a standard part of Java and C++. Recommended: CS 260. Audit available.<br /> <br /> Here are some topics we&rsquo;ll be covering in this course:</p>
+<ul>
+<li>object design
+<ul>
+<li>responsibility-driven design</li>
+<li>coupling</li>
+<li>cohesion</li>
+<li>inheritance</li>
+<li>polymorphism</li>
+</ul>
+</li>
+<li>Java
+<ul>
+<li>array structure</li>
+<li>packages</li>
+<li>interfaces and abstract classes</li>
+<li>the Collections Framework</li>
+<li>exception handling</li>
+</ul>
+</li>
+<li>C++
+<ul>
+<li>friend classes/functions</li>
+<li>abstract classes</li>
+<li>operator overloading</li>
+<li>templates</li>
+<li>Standard Template Library</li>
+<li>exception handling</li>
+</ul>
+</li>
+</ul>
+<h3>Instructional Approach</h3>
+<p>This course is arranged chronologically and employs a modular design. Each week, students should complete all assignments listed in that week's lesson module. These modules are available by clicking "Content" on the course navigation bar.</p>
+<p>Due dates for each week's assignments will be listed within the module itself. Assignments within the modules may direct students to use many of the tools contained in Desire2Learn, including the Assignment Dropbox, Discussions, and Quizzes. These tools will be accessible both from within the weekly content modules, as well as from the course navigation bar.</p>
+<p><!-- #BeginLibraryItem "/Library/distance students welcome.lbi" --> This course is often taught as parallel sections, one in the classroom and the other via distance learning. When that is the case, distance students who want to attend classroom sessions are always welcome.<!-- #EndLibraryItem --></p>
+<h3>Communication Guidelines</h3>
+<p>Please conduct all course-related communication by using Desire2Learn discussion boards and email. I will be checking the discussion boards and email in Desire2Learn daily on weekdays. Email sent on weekdays will be answered within 24 hours. Email sent over the weekend will be answered the following Monday. My email address is <strong>lliang</strong> on Desire2Learn.</p>
+<p>I am not available on weekends during the term. As noted, I will try to be both available and prompt in my responses during the week (Monday - Friday). However, on weekends I can not promise I will be checking on Desire2Learn or answering questions. If you miss me on Friday you might not have any contact with me until Monday morning, so don't wait until the last minute to ask questions or report problems.</p>
+<p>If your question or comment would be of interest to other students, please post it to the Discussions area. This way other participants can help answer questions, and all participants will benefit from the answers. Please refer to the information on "netiquette" in the introductory module for guidelines governing the content of written communications. Your first communication assignment is to introduce yourself in the discussion topic "Introductions."</p>
+<h3>Learning Outcomes</h3>
+<p>On completion of this course students should be able to:</p>
+<ul>
+<li>Employ a deep knowledge of the object-oriented paradigm and a recognized software development methodology to develop computer programs that demonstrate significant functionality and usability.</li>
+<li>Design and construct object-oriented software with appropriate layers of abstraction and associated use of encapsulation, inheritance, polymorphism and interfaces.</li>
+<li>Effectively use the extensive libraries that are available as a standard part of Java and C++.</li>
+<li>Architect systems with minimal complexity and cost to attain maximal functionality, flexibility and maintainability.</li>
+</ul>
+<h3>Course Prerequisites</h3>
+<p>CS260 or equivalent.</p>
+<h3>Required Text</h3>
+<p>The textbook for this course is C++ Primer Plus by Stephen Prata and Thinking in Java by Bruce Eckel. You can search for "C++ Primer Plus pdf" or "Thinking in Java pdf" and download the books for free.</p>
+<p>An excellent tutorial from then Sun, now Oracle: <a href="http://download.oracle.com/javase/tutorial/" target="_blank"> http://download.oracle.com/javase/tutorial/</a></p>
+<p>If you need a C++ reference here are some possibilities:</p>
+<ul>
+<li>you may already have the textbook from CS260, <a href="http://www.aw-bc.com/catalog/academic/product/0,1144,0321247256,00.html" target="_blank">Data Abstraction and Problem Solving with C++</a> by Frank M. Carrano</li>
+<li><a href="http://www.oreilly.com/catalog/core/" target="_blank">C++ The Core Language</a>, by Gegory Satir and Doug Brown. This is an excellent introduction to C++ if you already know C.</li>
+<li><a href="http://www.mindview.net/Books/TICPP/ThinkingInCPP2e.html" target="_blank">Thinking in C++, 2nd Edition</a> by Bruce Eckel, which is available as a free download</li>
+<li><em>there are many other good C++ references available on the Internet </em></li>
+</ul>
+<h3>Development Environments</h3>
+<p>We will be using<!-- #BeginLibraryItem "/Library/Visual Studio Express.lbi" --> Linux for development environment.</p>
+<h3>Participation Expectations</h3>
+<p>Students in this course are expected to enter the course at least 3 times a week to work on the modules, check email, and participate in discussions. Each time you log into the course be sure to check for any new announcements, email and discussion messages, and calendar postings.</p>
+<h3>Grading</h3>
+<p><b>Assignments</b></p>
+<p>You can expect several homework projects to do during the course of this class, and you should probably allocate several hours to work on these each week. It is the most critical component of this class. I am a firm believer that learning in Computer Science is only achieved through hands on exploration. This is not an armchair subject. You have to do it to get it.</p>
+<p>To get a good grade for your assignment, your work must:</p>
+<ul>
+<li>be coded according to the <a href="modB_codingStandards.html" target="_blank">Coding Standards</a></li>
+<li>compile without warnings</li>
+<li>run without errors when given correct input and arguments.</li>
+<li>be submitted on time
+<ul>
+<li>for Assignments 1-3, there will be a 7-day grace period and a 20% lateness penalty</li>
+<li>there will be no grace period for Assignment 4&amp;5</li>
+</ul>
+</li>
+</ul>
+<p><b>Labs</b></p>
+<p><strong></strong>You can expect several labs to complete during the term. They are designed to help you review the basic data structures you have learned from CS260.</p>
+<p><strong>Assessments (Quizzes)</strong></p>
+<p>There will be several online quizzes, plus a midterm and final exam, during the course of this class.&nbsp; These are not optional, and must also be completed on schedule.&nbsp; They will also count towards your grade.</p>
+<p>Failure to take any exam or online quiz will automatically result in the award of 0 points for that exam or quiz.The only exception is if extraordinarily unusual circumstances exist, have been discussed with the instructor, and as a result of which a waiver has been granted.</p>
+<p><b>Programming Proficiency Test</b></p>
+<p>There will be a programming proficiency test towards the end of the term. It's a two-hour timed programming test in linux environment. It's crucial you are familiar with unix development tools such as vi, makefile and gdb.</p>
+<p><strong>Final Grade</strong></p>
+<p>gradeTotal = 40 * averageProjectPercentage +&nbsp; 10 * averageQuizPercentage + 10 * midtermPercentage + 10 * finalExamPercentage + 10 * averageLabPercentage + 20 * programmingProficiencyPercentage</p>
+<p>40% of your grade is based on your project work, 10% of your grade is based on your quizzes, 10% of your grade is based on midterm exam, 10% of your grade is based on final exam, 10% of your grade is based on lab work and 20% of your grade is based on programming proficiency test.</p>
+<p><b>Grading Scale:</b></p>
+<table>
+<tbody>
+<tr>
+<th scope="col">Letter Grade</th>
+<th>Total Final Percentage</th>
+</tr>
+<tr>
+<th scope="row">A</th>
+<td>90 - 100</td>
+</tr>
+<tr>
+<th scope="row">B</th>
+<td>80 - 89</td>
+</tr>
+<tr>
+<th scope="row">C</th>
+<td>70 - 79</td>
+</tr>
+<tr>
+<th scope="row">D</th>
+<td>60 - 69</td>
+</tr>
+<tr>
+<th scope="row">F</th>
+<td>&lt; 60</td>
+</tr>
+</tbody>
+</table>
+<br />
+<p><strong>Classroom Behavior</strong></p>
+<p>I work hard to teach a deep and subtle understanding of how code works and how to write and debug it. This requires a classroom atmosphere of concentrated attention. The more of us who pay attention, the stronger and more focused that becomes.</p>
+<p>Your behavior in the classroom has an effect on other students and on me. Your participation, in the form of questions and comments is welcome. Your attention is appreciated. But behavior that disrupts the atmosphere of the classroom will not be tolerated. This includes side conversations, texting, playing online games, etc.</p>
+<p>I welcome your presence in the classroom. But if you choose to be in my classroom, you&rsquo;re required to be there mentally as well as physically.</p>
+<p><strong>Academic Honesty</strong></p>
+<p>Learning to write code is the mental equivalent of learning gymnastics. Cheating in a computer science course is like going to the gym and hiring someone else to lift the weights for you.</p>
+<p>If you don&rsquo;t do the work yourself, you will not learn to write code. This will become painfully obvious the first time you have to write code that you can&rsquo;t find on the Internet.</p>
+<p>It&rsquo;s fine if you want to discuss design and algorithms with other students on a project, but make sure that you do the work yourself and understand what you did.</p>
+<p>Cheating and plagiarism will be dealt with as mercilessly as the college&rsquo;s <a href="http://www.pcc.edu/about/policy/student%2Drights/student-rights.pdf#academic" target="_blank">Academic Integrity Policy</a> allows.</p>
+<p><strong>Special Accommodations</strong></p>
+<p>PCC is committed to supporting all students. If you plan to use academic accommodations for this course, please contact your instructor as soon as possible to discuss your needs.</p>
+<p>Accommodations are not retroactive; they begin when the instructor receives the "Approved Academic Accommodations" letter from you (submitted in person for courses on campus; via email for Distance Learning courses).</p>
+<p>To request academic accommodations for a disability, please contact a disability services counselor on any PCC campus. Office locations, phone numbers, and additional information may be located on the <a href="http://www.pcc.edu/resources/disability/" target="_blank">Disability Services</a> website.</p>
+<p><strong>Flexibility</strong></p>
+<p>The instructor reserves the right to modify course content and/or substitute assignments and learning activities in response to institutional, weather or class situations.</p>
+<p><span><strong>Title IX/Nondiscrimination Statement</strong><br /><br />Portland Community College is committed to creating and fostering a learning and working environment based on open communication and mutual respect. If you believe you have encountered sexual harassment, sexual misconduct, sexual assault, or discrimination based on race, color, religion, age national origin, veteran status, sex, sexual orientation, gender identity, or disability please contact the Office of Equity and Inclusion at <a href="tel:%28971%29%20722-5840">(971) 722-5840</a> or<a href="mailto:equity.inclusion@pcc.edu">equity.inclusion@pcc.edu</a>.</span></p>
+<h3>&nbsp;</h3>
+</div>
+<div style="text-align: center;" id="footer"><i>Course Information</i></div>
+</div>
+</body>
+</html>

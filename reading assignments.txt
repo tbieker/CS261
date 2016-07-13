@@ -1,0 +1,72 @@
+Computer Science 261 Reading Assignments
+
+Week 1
+	C++ Primer
+		Chapter 10
+		Chapter 12
+	Java Tutorial
+		Getting Started
+		Learning the Java Language
+			The first two topics
+		
+Week 2
+	C++ Primer
+	
+	Java Tutorial
+		Learning the Java Language
+			Classes and Objects
+				Classes
+				Objects
+				More on Classes
+
+Week 3
+	C++ Primer
+		Chapter 13 Class Inheritance
+
+	Java Tutorial
+		Learning the Java Language
+			Interfaces and Inheritance
+
+Week 4
+	C++ Primer
+		Chapter 13 Class Inheritance
+		Chapter 14 Reusing Code in C++
+		
+	Java Tutorial
+		Learning the Java Language
+			Interfaces and Inheritance
+			
+Week 5
+	C++ Primer
+		Chapter 15 Friends, Exceptions and More
+	Java Tutorial
+		Learning the Java Language
+			Java Exception
+
+Week 6
+	C++ Primer
+		Chapter 11 Working with Classes
+		Chapter 15 Friends, Exceptions and More
+		Chapter 16 The String Class and the Standard Template Library
+
+	Java Tutorial
+		Learning the Java Language
+			Numbers and Strings
+
+Week 7
+	None
+	
+Week 8
+	Java Tutorial
+		Collections
+			Introduction to Collections
+			Interfaces
+
+Week 9
+	Java Tutorial
+		Collections
+			Implementations
+			Algorithms
+
+Week 10
+	UML 2 Class Diagrams: An Agile Introduction

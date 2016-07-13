@@ -57,3 +57,17 @@ std::ostream& operator<<(std::ostream& out, const Bone& aBone){
         << aBone.sideTwo;
     return out;
 }
+
+
+
+void Bone::print(){ //print in format |sideOne|sideTwo|
+	std::cout << '|' << aBone.sideOne << '|' << aBone.sideTwo << '|';
+}
+
+void Bone::swap(){  //swap ends of bone
+	int temp;
+	temp = sideOne;
+	sideOne = sideTwo;
+	sideTwo = temp;
+	return;
+}

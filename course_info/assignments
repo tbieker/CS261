@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head lang="en">
+<link rel="stylesheet" type="text/css" href="/shared/css/TemplateFiles/stylesheet.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Syllabus</title>
+</head>
+
+<body>
+<div sizset="0" sizcache="1" id="container">
+<div id="decorative">&nbsp;&nbsp;</div>
+<div id="header">
+<h1><img src="../images/icons/CourseInfo-yellow_64.png" />&nbsp;Programming Assignments</h1>
+</div>
+<div sizset="0" sizcache="1" id="body">
+<h2 class="headerText">How To Submit Programming Assignments</h2>
+<p class="headerText2">Personalize Your Code</p>
+<p>Your code should always print out the following as its first line of output:</p>
+<blockquote>
+<p>CS261 - <strong>assignment - your name</strong></p>
+</blockquote>
+<p>Make sure you change the places marked in <strong>bold text</strong> to show me which assignment you are submitting and who you are. <br /> <br /> For example, if I were submitting assignment 3, my code would print out:</p>
+<blockquote>
+<p>CS261 - A03 - Li Liang</p>
+</blockquote>
+<p><em>I will deduct IQ points if you submit an assignment to me and your code prints out &ldquo;assignment&rdquo; or &ldquo;your name</em>.<em>&rdquo;</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-)</p>
+<h2 class="headerText2">What To Upload</h2>
+<p>Each individual assignment will specify what you have to upload.</p>
+<h2><span class="headerText2">Grading For Assignments</span></h2>
+<p>You will get a maximum of <strong>100</strong> points for each assignment To get a good grade, you will want to maximize the number of these points that you earn.</p>
+<p>To get a <b>100</b> for an assignment, you must do the assignment in a satisfactory manner, which means your work must:</p>
+<ul>
+<li>be coded according to the Coding Standards (you can select this from the Course Menu on the left side of your browser window)</li>
+<li>compile without warnings</li>
+<li>run without errors when given correct input and arguments. You do not need to check for input or argument errors unless:
+<ul>
+<li>such checking is specified by an assignment</li>
+<li>you feel like doing it for your own learning</li>
+</ul>
+</li>
+<li><em>meet all the design and implementation requirements specified in the assignment</em></li>
+<li>be submitted on time</li>
+</ul>
+</div>
+<div style="text-align: center;" id="footer"><i>Course Information</i></div>
+</div>
+</body>
+</html>
