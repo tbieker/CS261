@@ -6,8 +6,11 @@
 
 class SingleBone : public Node{
 	private:
-		
+        insertNode(Bone& aBone); //create new node and set to next
 	public:
-		node * next;
+		//node * next;
+
+        bool insert(Bone aBone);
 		void print(); //print free tail of bone
+        void printTail();
 }

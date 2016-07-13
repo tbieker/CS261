@@ -24,9 +24,10 @@ public:
     void returnSides(int& sideA, int& sideB);
     bool returnIsDouble();  //return true if bone is double number
 
-	void print(); // print |sideOne|sideTwo|
+    
+    void print(); // print |sideOne|sideTwo|
 	void swap(); //swap sides of bone
-	
+
     const Bone& operator=(const Bone& aBone);
     friend std::ostream& operator<<(std::ostream& out, const Bone& aBone);
 };

@@ -1,5 +1,5 @@
 //Tyler Bieker
-//CS 261 Assignment 1
+//CS 261 Assignment 2
 //07/12/2016
 
 //linked list
@@ -14,15 +14,15 @@ class LinkedList{
 	private:
 		node * head;
 		node * tail;
-		 
+
 	public:
 		list();							//default constructor
-		~list();
-		
-		void insert(Bone aBone);
+		//TODO ~list();
+
+		bool insert(Bone aBone); //insert node at end of list. return true if insert successful
 		void printEnd(); //print the tail of the list
-		
-		const LinkedList& operator=(const LinkedList& aList); //deep copy
+
+		//TODO const LinkedList& operator=(const LinkedList& aList); //deep copy
 };
 
 #endif
