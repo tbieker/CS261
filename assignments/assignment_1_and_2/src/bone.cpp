@@ -61,7 +61,7 @@ std::ostream& operator<<(std::ostream& out, const Bone& aBone){
 
 
 void Bone::print(){ //print in format |sideOne|sideTwo|
-	std::cout << '|' << aBone.sideOne << '|' << aBone.sideTwo << '|';
+	std::cout << '|' << sideOne << '|' << sideTwo << '|';
 }
 
 void Bone::swap(){  //swap ends of bone

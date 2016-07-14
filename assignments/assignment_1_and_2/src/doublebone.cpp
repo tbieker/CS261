@@ -5,6 +5,7 @@
 //doublebone.cpp
 
 #include "doublebone.h"
+#include <iostream>
 
 DoubleBone::DoubleBone(){
     top = nullptr;
@@ -30,8 +31,8 @@ DoubleBone::~DoubleBone(){
     return;
 }
 
-bool DoubleBone::insert(Bone aBone){
-    if(isComplete == true){
+bool DoubleBone::insert(Bone& aBone){
+    if(isComplete() == true){
         if(top->insert(aBone) == true){
             return true;
         }else if(middle->insert(aBone) == true){
@@ -42,11 +43,11 @@ bool DoubleBone::insert(Bone aBone){
             return bottom->insert(aBone);
         }
     }else{  //three lists have not been filled
-        if(aBone.head == bone.head){
+        if(aBone.sideOne == bone.sideTwo){
     		return addToEmptyList(aBone);
     	}else{
     		aBone.swap(); //swap ends of bone and retest
-    		if(aBone.head == bone.head){
+    		if(aBone.sideOne == bone.sideTwo){
                 return addToEmptyList(aBone);
     		}else{
     			return false; //bone does not match
@@ -72,7 +73,7 @@ bool DoubleBone::addToEmptyList(Bone& aBone){
     }
 }
 
-bool DoubleBone::newList(LinkedList& newList, Bone& aBone){
+bool DoubleBone::newList(LinkedList * newList, Bone& aBone){
     newList = new LinkedList;
     return newList->insert(aBone);
 }
@@ -93,14 +94,14 @@ void DoubleBone::printTail(){ //print free ends(tails) of lists
 void DoubleBone::print(){   //print all nodes
     if(top != nullptr){
         top->printList();
-        std::endl;
+        std::cout << std::endl;
         bone.print();
         if(middle != nullptr){
             middle->printList();
-            std::endl;
+            std::cout << std::endl;
             if(bottom != nullptr){
                 bottom->printList();
-                std::endl;
+                std::cout << std::endl;
             }
         }
     }

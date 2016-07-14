@@ -9,19 +9,22 @@
 
 #include "node.h"
 #include "bone.h"
+#include "doublebone.h"
+#include "singlebone.h"
 
 class LinkedList{
 	private:
-		node * head;
-		node * tail;
+		Node * head;
+		Node * tail;
 
 	public:
-		list();							//default constructor
+		LinkedList();							//default constructor
 		//TODO ~list();
 
-		bool insert(Bone aBone); //insert node at end of list. return true if insert successful
-		void printEnd(); //print the tail of the list
-
+		bool insert(Bone& aBone); //insert node at end of list. return true if insert successful
+		void printTail(); //print the tail of the list
+		void printList();
+		
 		//TODO const LinkedList& operator=(const LinkedList& aList); //deep copy
 };
 

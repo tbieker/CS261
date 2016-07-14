@@ -5,14 +5,15 @@
 //singlebone.cpp
 
 #include "singlebone.h"
+#include <iostream>
 
-bool SingleBone::insert(Bone aBone){
-    if(aBone.head == bone.head){
+bool SingleBone::insert(Bone& aBone){
+    if(aBone.sideOne == bone.sideTwo){
         insertNode(aBone);
         return true;
     }else{
         aBone.swap();   //swap ends and compare again
-        if(aBone.head == bone.head){
+        if(aBone.sideOne == bone.sideTwo){
             insertNode(aBone);
             return true;
         }else{

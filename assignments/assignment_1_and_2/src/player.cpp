@@ -27,7 +27,11 @@ void Player::startingHand(Yard& aYard){    //draw seven cards for initial hand
 
 void Player::push(Bone aBone){
     Node * newNode;
-    newNode = new Node;
+	if(aBone.returnIsDouble() == true){
+		newNode = new DoubleBone;
+	}else{
+		newNode = new SingleBone;
+	}
     newNode->bone = aBone;
 
     if(head == nullptr){
@@ -89,7 +93,7 @@ void Player::printHand(){
         Node * curr;
         curr = head;
         while(curr != nullptr){
-            std::cout << curr->bone << std::endl;
+            curr->print();
             curr = curr->next;
         }
     }

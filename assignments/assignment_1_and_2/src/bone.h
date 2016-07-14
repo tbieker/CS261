@@ -12,12 +12,15 @@
 
 class Bone{
 private:
-    int sideOne;
-    int sideTwo;
+    //int sideOne;
+    //int sideTwo;
     bool isDouble;
 
 public:
-    Bone();
+    int sideOne; //head of bone
+    int sideTwo; //tail of bone
+
+   Bone();
     Bone(int sideA, int sideB); //constructor to set sides
 
     void setSides(int sideA, int sideB);

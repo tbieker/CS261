@@ -21,8 +21,8 @@ int Deck::getLength(){
 }
 
 void Deck::push(Bone& newBone){
-    node * newNode;
-    newNode = new node;
+    Node * newNode;
+    newNode = new SingleBone;
     newNode->bone = newBone;
     newNode->next = top;
     top = newNode;
@@ -34,7 +34,7 @@ bool Deck::pop(Bone& aBone){
     if(isEmpty()){
         return false;
     }else{
-        node * curr;
+        Node * curr;
         curr = top->next;
         aBone = top->bone;
         length = length - 1;
@@ -50,20 +50,20 @@ bool Deck::pop(Bone& aBone, int position){
     }
     else if(position == 1){
         aBone = top->bone;
-        node * temp;
+        Node * temp;
         temp = top->next;
         delete top;
         top = temp;
         length = length - 1;
         return true;
     }else{
-        node * curr;
+        Node * curr;
         curr = top;
-        for(int i = 1; i < position - 1; i++){  //move pointer to node before position
+        for(int i = 1; i < position - 1; i++){  //move pointer to Node before position
             curr = curr->next;
         }
         aBone = curr->next->bone;
-        node * temp;    //pointer to hold node to be deleted
+        Node * temp;    //pointer to hold Node to be deleted
         temp = curr->next;
         if(curr->next != nullptr){
             curr->next = curr->next->next;
@@ -88,7 +88,7 @@ void Deck::display(){
     if(isEmpty()){
         return;
     }else{
-        node * curr;
+        Node * curr;
         curr = top;
         while(curr != nullptr){
             std::cout << curr->bone << std::endl;
@@ -103,7 +103,7 @@ const Deck& Deck::operator=(const Deck& aDeck){
         return *this;
     }else{
         destroyDeck();
-        node * curr;
+        Node * curr;
         curr = aDeck.top;
         while(curr != nullptr){
             push(curr->bone);
@@ -114,7 +114,7 @@ const Deck& Deck::operator=(const Deck& aDeck){
 }
 
 void Deck::destroyDeck(){
-    node * curr;
+    Node * curr;
     curr = top;
     while(curr != nullptr){
         curr = curr->next;

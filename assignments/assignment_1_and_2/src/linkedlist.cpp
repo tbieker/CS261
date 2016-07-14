@@ -5,8 +5,15 @@
 //linkedlist.cpp
 
 #include "linkedlist.h"
+#include <iostream>
 
-bool LinkedList::insert(Bone aBone){
+LinkedList::LinkedList(){
+	head = nullptr;
+	tail = nullptr;
+	return;
+}
+
+bool LinkedList::insert(Bone& aBone){
     Node * newNode;
 
     if(head == nullptr){
@@ -35,7 +42,7 @@ void LinkedList::printTail(){
 }
 
 void LinkedList::printList(){
-    node * curr;
+    Node * curr;
     curr = head;
     while(curr != nullptr){
         curr->print();

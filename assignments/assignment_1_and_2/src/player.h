@@ -10,13 +10,12 @@
 
 #include "bone.h"
 #include "yard.h"
+#include "node.h"
+#include "singlebone.h"
+#include "doublebone.h"
 
 class Player{
 private:
-    struct Node{
-        Bone bone;
-        Node * next = nullptr;
-    };
     Node * head;
 
     int score; //score is the number of bones in hand

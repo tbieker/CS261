@@ -11,14 +11,13 @@
 
 #include "bone.h"
 #include <iostream>
+#include "node.h"
+#include "singlebone.h"
+#include "doublebone.h"
 
 class Deck{
 private:
-    struct node{
-        Bone bone;
-        node * next;
-    };
-    node * top;
+    Node * top;
     int length; //number of bones in deck
 
     void destroyDeck();
