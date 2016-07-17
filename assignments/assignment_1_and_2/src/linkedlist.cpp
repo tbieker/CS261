@@ -16,25 +16,36 @@ LinkedList::LinkedList(){
 bool LinkedList::insert(Bone& aBone){
     Node * newNode;
 
+	std::cout << "inserting into list\n";
+	
     if(head == nullptr){
-        newNode = new SingleBone; //first node would not be double. Only one double per number in deck
-        newNode->bone = aBone;
+		std::cout << "inserting head\n";
+		
+		newNode = new SingleBone; //first node would not be double. Only one double per number in deck
+		newNode->bone = aBone;
         head = newNode;
         tail = newNode;
         return true;
     }else{
+		std::cout << "else....";
+		
         bool result; //true if insertion success
         if(tail->bone.returnIsDouble() == true){
-            //if the tail is a double, tail will remain on that
+            std::cout << "inserting double\n";
+			
+			//if the tail is a double, tail will remain on that
             //piece. if it is single, tail will advance
             result = tail->insert(aBone);
             return result;
         }else{
+			std::cout << "inserting single\n";
+			
             result = tail->insert(aBone);
             tail = tail->next;
             return result;
         }
     }
+	std::cout << "end else\n";
 }
 
 void LinkedList::printTail(){

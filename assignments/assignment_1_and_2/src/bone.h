@@ -15,6 +15,8 @@ private:
     //int sideOne;
     //int sideTwo;
     bool isDouble;
+	
+	void setDouble();
 
 public:
     int sideOne; //head of bone

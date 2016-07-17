@@ -41,6 +41,7 @@ int main(){
 						cout << "inserted\n";
 						break;
 			default:	cout << "unable to insert\n";
+						break;
 		}
 		cout << "Drawing bone\n";
 		testDraw = testYard.draw(testBone);

@@ -12,22 +12,14 @@ Bone::Bone(){
 Bone::Bone(int sideA, int sideB){
     sideOne = sideA;
     sideTwo = sideB;
-    if(sideOne == sideTwo){
-        isDouble = true;
-    }else{
-        isDouble = false;
-    }
+    setDouble();
     return;
 }
 
 void Bone::setSides(int sideA, int sideB){
     sideOne = sideA;
     sideTwo = sideB;
-    if(sideOne == sideTwo){
-        isDouble = true;
-    }else{
-        isDouble = false;
-    }
+    setDouble();
     return;
 }
 
@@ -38,11 +30,9 @@ void Bone::returnSides(int& sideA, int& sideB){
 }
 
 bool Bone::returnIsDouble(){
-    if(isDouble == true){
-        return true;
-    }else{
-        return false;
-    }
+    std::cout << "returnIsDouble: " << isDouble << std::endl;
+	
+	return isDouble;
 }
 
 const Bone& Bone::operator=(const Bone& aBone){
@@ -69,5 +59,14 @@ void Bone::swap(){  //swap ends of bone
 	temp = sideOne;
 	sideOne = sideTwo;
 	sideTwo = temp;
+	return;
+}
+
+void Bone::setDouble(){
+	if(sideOne == sideTwo){
+		isDouble = true;
+	}else{
+		isDouble = false;
+	}
 	return;
 }

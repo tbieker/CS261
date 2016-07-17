@@ -5,6 +5,7 @@
 //singlebone.cpp
 
 #include "singlebone.h"
+#include "doublebone.h"
 #include <iostream>
 
 bool SingleBone::insert(Bone& aBone){
@@ -24,8 +25,12 @@ bool SingleBone::insert(Bone& aBone){
 
 void SingleBone::insertNode(Bone& aBone){
     Node * newNode;
-    newNode = new SingleBone;
-    newNode->bone = aBone;
+	if(aBone.returnIsDouble() == true){
+		newNode = new DoubleBone;
+	}else{
+		newNode = new SingleBone;
+    }
+	newNode->bone = aBone;
     newNode->next = nullptr;
     this->next = newNode;
     return;
