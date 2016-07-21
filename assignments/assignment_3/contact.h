@@ -11,14 +11,16 @@
 class Contact{
 private:
     string name; //name of contact
-
-    enum tag{email, phone, facebook};
     tag preferredContact;
-
-    contactList //TODO determine data structure for current contacts
 
 
 public:
-    void print(); //print contact information
-
+    Contact();
+	~Contact();
+	
+	bool newContact(); //insert new contact into contactList	
+	
+	void print(); //print contact information
+	
+	//TODO Operator=
 };

@@ -10,9 +10,7 @@ private:
     string toNumber;
     string fromNumber;
 
-    //string to hold message
-    string message;
-
 public:
+	Text();
 
 };

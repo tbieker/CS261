@@ -4,6 +4,7 @@
 
 //message list class
 //manages lists of sent and saved messages
+//stored as binary search tree
 
 class MessageList{
 private:
