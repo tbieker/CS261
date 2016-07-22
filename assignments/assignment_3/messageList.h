@@ -8,7 +8,13 @@
 
 class MessageList{
 private:
+    BST newMessages;
+    BST savedMessages;
+    BST sentMessages;
 
 public:
+    MessageList();
+    ~MessageList();
 
+    
 };

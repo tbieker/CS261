@@ -13,14 +13,18 @@ private:
     string name; //name of contact
     tag preferredContact;
 
-
 public:
     Contact();
+    Contact(string name, tag preferred);
 	~Contact();
-	
-	bool newContact(); //insert new contact into contactList	
-	
+
+    bool editName(string newName);
+    bool editTag(tag newTag);
+
+    string returnName();
+    tag returnPreferred();
+
 	void print(); //print contact information
-	
+
 	//TODO Operator=
 };

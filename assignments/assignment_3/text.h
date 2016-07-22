@@ -12,5 +12,8 @@ private:
 
 public:
 	Text();
+    ~Text();
+
+    //TODO Operator<();
 
 };

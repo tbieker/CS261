@@ -20,4 +20,5 @@ public:
     void setDestination(const string sender, const string recipient); //set the toAddress and fromAddress;
     void setMessage(const string newMessage);
 
+    //TODO Operator<();
 };
