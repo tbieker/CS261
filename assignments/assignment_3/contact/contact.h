@@ -15,7 +15,7 @@ private:
 
 public:
     Contact();
-    Contact(string name, tag preferred);
+    Contact(string newName, tag newTag);
 	~Contact();
 
     bool editName(string newName);
