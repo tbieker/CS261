@@ -29,14 +29,34 @@ bool Contact::editTag(tag newTag){
     return;
 }
 
-void Contact::print(){
+string Contact::returnName(){
+	return name;
+}
+
+tag Contact::returnPreferred(){
+	return preferredContact;
+}
+
+void Contact::print() const{
     std::cout << name << std::endl;
     std::cout << preferredContact << std::endl;
     return;
 }
 
-Contact& Operator=(const Contact aContact){
+Contact& Contact::operator=(const Contact& aContact){
     name = aContact.name;
     preferredContact = aContact.preferredContact;
     return;
+}
+
+Contact& Contact::operator<(const Contact& aContact){
+	if(this.name < aContact.name){
+		return this;
+	}else{
+		return aContact;
+	}
+}
+
+Contact& Contact::operator>(const Contact& aContact){
+	return aContact < this;
 }

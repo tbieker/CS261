@@ -7,6 +7,7 @@
 //
 
 #include <string>
+#include "definitions.h"
 
 class Contact{
 private:
@@ -24,7 +25,10 @@ public:
     string returnName();
     tag returnPreferred();
 
-	void print(); //print contact information
+	void print() const; //print contact information
 
-	//TODO Operator=
+	Contact& operator=(const Contact& aContact);
+	
+	Contact& operator<(const Contact& aContact);
+	Contact& operator>(const Contact& aContact);
 };

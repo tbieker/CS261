@@ -39,7 +39,8 @@ ContactList::ContactList(const ContactList& aTable){
 
 }
 
-//TODO
+/*
+//TODO rewrite for Contact list
 ContactList::ContactList(char fileName[100]){
   capacity = DEFAULT_CAPACITY;
   initializeTable();
@@ -85,6 +86,7 @@ ContactList::ContactList(char fileName[100]){
   inFile.close();
   return;
 }
+*/
 
 ContactList::~ContactList(){
   destroyTable();
@@ -94,16 +96,15 @@ ContactList::~ContactList(){
 //Public functions
 //****************************************************************
 
-//TODO rewrite
 bool ContactList::insert(const Contact& newContact){
   int key;
-  char ticker[100];
-  aStock.getTicker(ticker);
-  key = keyGen(ticker);
+  string name;
+  name = newContact.returnName();
+  key = keyGen(name);
 
   node * newNode;
-  newNode = new node;
-  newNode->data = aStock;
+  newNode = new Node;
+  newNode->contact = newContact;
 
   //first node of table[key]
   if(table[key] == nullptr){
@@ -120,16 +121,13 @@ bool ContactList::insert(const Contact& newContact){
     * Sort nodes alphabetically
     ********************************************************/
 
-    std::cout << aStock << std::endl;
-    std::cout << key << std::endl;
-
     //create new head
-    if(aStock < curr->data){
+    if(newContact < curr->contact){
       newNode->next = table[key];
       table[key] = newNode;
       return;
     }else{
-      while(curr != nullptr && curr->data < aStock){
+      while(curr != nullptr && curr->contact < newContact){
         prev = curr;
         curr = curr->next;
         }
@@ -147,18 +145,19 @@ bool ContactList::insert(const Contact& newContact){
   }
 }
 
-//TODO rewrite for ContactList
-bool ContactList::remove(/*TODO*/){
+bool ContactList::remove(string rName){
   node * curr;
   node * prev;
-  char aTicker[100];
 
+  string name;
+  name = newContact.returnName();
+  
   int key;
-  key = keyGen(tickerSymbol);
+  key = keyGen(rName);
   curr = table[key];
   prev = table[key];
-  curr->data.getTicker(aTicker);
-  if(aTicker == tickerSymbol){  //head of list removed
+  name = curr->contact.returnName();
+  if(name == rName){  //head of list removed
     table[key] = curr->next;
     delete curr;
     curr = nullptr;
@@ -166,8 +165,8 @@ bool ContactList::remove(/*TODO*/){
   }
   curr = curr->next;
   while(curr){
-    curr->data.getTicker(aTicker);
-    if(aTicker == tickerSymbol){
+    name = curr->contact.returnName();
+    if(name == rName){
       prev->next = curr->next;
       delete curr;
       curr = nullptr;
@@ -178,16 +177,6 @@ bool ContactList::remove(/*TODO*/){
     }
   }
   return false;
-}
-  node * mod;
-  if(retrieve(tickerSymbol, mod->data)){
-    mod->data.setValue(newNetAssetValue);
-    mod->data.setDate(newDate);
-    mod->data.setReturn(newDateReturn);
-    return true;
-  }else{
-    return false;
-  }
 }
 
 void ContactList::print(){
@@ -201,6 +190,7 @@ void ContactList::print(){
   }
   return;
 }
+/*
     //function to monitor the individual chains in hash file
   for(int i = 0; i < capacity; i++){
     int size = 0;
@@ -216,6 +206,9 @@ void ContactList::print(){
   }
   return;
 }
+*/
+
+//Contact retrieve(const string name){}
 
 void ContactList::writeOut(char * fileName){
   std::ofstream out;
@@ -230,7 +223,7 @@ void ContactList::writeOut(char * fileName){
   for(int i = 0; i < capacity; i++){
     curr = table[i];
     while(curr){
-      out << curr->contact;
+      curr->contact.print();
       curr = curr->next;
     }
   }
@@ -266,8 +259,10 @@ void ContactList::destroyTable(){
   return;
 }
 
-int ContactList::keyGen(/*TODO*/){
-    int key;
-    key = int(/*TODO*/) % 26;
+int ContactList::keyGen(const string name){
+    char c = name.at(0); //collect first letter in string
+	putchar(toupper(c)); //ensure uppercasecase
+	int key;
+    key = int(c) % 26;
     return key;
 }

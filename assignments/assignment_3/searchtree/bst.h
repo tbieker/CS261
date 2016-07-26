@@ -9,13 +9,28 @@
 class BST{
 private:
     TreeNode * root;
+	
+	int numNodes;
+	
+	TreeNode * balanceTree(TreeNode * root);	
+	TreeNode * insertLeaf(TreeNode * root, TreeNode * newLeaf);
+	TreeNode * rotateRight(TreeNode * root);
+	TreeNode * rotateLeft(TreeNode * root);
+	
+	int getHeight(TreeNode * root);
+	int getBalance(TreeNode * root);
+	int compare(int x, int y);
+
+	void deleteTree(TreeNode * root);
+	void copyTree(TreeNode * newRoot, TreeNode * root);
 
 public:
     BST();
     ~BST();
 
-    bool insert(message newMessage);
+    bool insert(const message newMessage);
     bool remove(/*TODO*/);
 
-    //TODO Operator=();
+    BST operator=(const BST& tree);
+	
 };

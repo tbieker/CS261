@@ -16,6 +16,7 @@ struct Node{
 //Node for binary search tree
 struct TreeNode{
     Message message;
-    TreeNode * left;
-    TreeNode * right;
+    TreeNode * left = nullptr;
+    TreeNode * right = nullptr;
+	int height = 1;
 };
