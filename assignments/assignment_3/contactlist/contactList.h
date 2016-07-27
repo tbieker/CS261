@@ -7,17 +7,18 @@
 //Stored as hash table
 
 #include "definitions.h"
+#include "ctype.h"
 
 class ContactList{
 private:
 	Node ** table;
 	int capacity;
 	int size; //size of table
-	const static int DEFAULT_CAPACITY = 27;
+	const static int DEFAULT_CAPACITY = 27; // a-z list
 
 	void destroyTable();
 	void initializeTable();
-	int keyGen(/*TODO key value*/);
+	int keyGen(const string name);
 
 public:
 	ContactList();
@@ -26,10 +27,10 @@ public:
 	~ContactList();
 
 	bool insert(const Contact& newContact);
-	bool remove(/*TODO*/);
+	bool remove(string rName);
 	void print(); //print contacts in list
 
-	//TODO Contact retrieve(); //return Contact
+	//TODO Contact retrieve(const string name); //return Contact
 
-	//TODO void writeOut(char fileName[100]); //write out contents of list to file
+	void writeOut(char fileName[100]); //write out contents of list to file
 };
