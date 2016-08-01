@@ -14,6 +14,5 @@ public:
 	Text();
     ~Text();
 
-    //TODO Operator<();
-
+	friend std::ostream& operator<<(std::ostream& out, const Text& aText);
 };

@@ -30,7 +30,8 @@ public:
 	bool remove(string rName);
 	void print(); //print contacts in list
 
-	//TODO Contact retrieve(const string name); //return Contact
+	//TODO bool retrieve(const string name, Contact contact); //return Contact
 
-	void writeOut(char fileName[100]); //write out contents of list to file
+	void save(); //write out contents of list to file
+	void load();
 };

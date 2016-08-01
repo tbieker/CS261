@@ -7,15 +7,12 @@
 //constructors
 
 Message::Message(){
+	message = "No message";
+	title = "No title";
 	return;
 }
 
 Message::~Message(){
-	return;
-}
-
-void Message::setDestination(){
-	
 	return;
 }
 
@@ -24,6 +21,23 @@ void setMessage(const string newMessage){
 	return;
 }
 
-Message& Operator<(){
-	
+void setTitle(const string title){
+	this.title = title;
+	return;
+}
+
+string returnTitle(){
+	return title;
+}
+
+const Message& Message::operator<(const Message& aMessage){
+	if(this.title.compare(aMessage.title) < 0){
+		return this;
+	}else{
+		return aMessage;
+	}
+}
+
+const Message& Message::operator>(const Message& aMessage){
+	return (aMessage < this);
 }

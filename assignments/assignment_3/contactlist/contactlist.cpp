@@ -210,6 +210,17 @@ void ContactList::print(){
 
 //Contact retrieve(const string name){}
 
+void save(){  //save contents of list to file
+	for(int i = 0; i < capacity; i++){
+		node * curr = table[i];
+		while(curr){
+		  curr->contact.save();
+		  curr = curr->next;
+		}
+	  }
+	return;
+}
+
 void ContactList::writeOut(char * fileName){
   std::ofstream out;
 

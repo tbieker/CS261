@@ -13,10 +13,19 @@ class Contact{
 private:
     string name; //name of contact
     tag preferredContact;
+	
+	string emailAddress;
+	string phoneNumber;
+	string facebookName;
+	
+	BST messageList;
+	
+	void saveInfo();
+	void saveMessages();
 
 public:
     Contact();
-    Contact(string newName, tag newTag);
+    Contact(string newName, tag newTag, string contactInfo);
 	~Contact();
 
     bool editName(string newName);
@@ -27,8 +36,15 @@ public:
 
 	void print() const; //print contact information
 
-	Contact& operator=(const Contact& aContact);
+	bool sendMessage();
+	void printMessages(); //print messages sent to this contact
 	
-	Contact& operator<(const Contact& aContact);
-	Contact& operator>(const Contact& aContact);
+	void save(); //save contact info and messages to file
+	void load();
+	
+	const Contact& operator=(const Contact& aContact);
+	const Contact& operator<(const Contact& aContact);
+	const Contact& operator>(const Contact& aContact);
+	
+	friend std::ostream& operator<<(std::ostream& out, const Contact& aContact);
 };

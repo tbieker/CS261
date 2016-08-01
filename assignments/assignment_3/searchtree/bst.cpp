@@ -4,6 +4,8 @@
 
 //bst.cpp
 
+#include "bst.h"
+
 BST::BST(){
 	numNodes = 0;
 	root = nullptr;
@@ -27,8 +29,14 @@ void BST::insert(const Message newMessage){
 	return;
 }
 
+//TODO
 bool BST::remove(){
 	return;
+}
+
+//TODO
+void BST::print(){
+	
 }
 
 BST& BST::operator=(const BST& tree){
@@ -176,3 +184,36 @@ TreeNode * BST::balanceTree(TreeNode * root){
 	}
 }
 
+void BST::save(string pathname){
+	TreeNode * curr;
+	
+	if(root == nullptr){
+		return;
+	}else{
+		curr = root;
+		saveNode(curr, pathname);
+		return;
+	}
+}
+
+void BST::saveNode(TreeNode * root, string pathname){
+	//pathname is /contactName/messages/...
+	if(root == nullptr){
+		return;
+	}else{
+		saveNode(root->left, pathname);
+		saveNode(root->right, pathname);
+		
+		ofstream outFile;
+		
+		//append message name /message(number).message
+		pathname.append(root->message.returnTitle);
+		pathname.append(".message");
+		outFile << root->message;
+		
+		outFile.close;
+		return;
+	}
+}
+	
+	

@@ -10,15 +10,20 @@ private:
 protected:
     //string to hold message
     string message;
+	string title; //title of message for comparison
 
 public:
     Message();
     ~Message();
 
-    virtual void print(); //print the sender, recipient and contents of message
-
-    void setDestination(const string sender, const string recipient); //set the toAddress and fromAddress;
+    virtual void print()=0; //print the sender, recipient and contents of message
+	
     void setMessage(const string newMessage);
+	void setTitle(const string title);
+	
+	string returnTitle();
 
-    //TODO Operator<();
+	//messages are compared by titles
+    const Message& Message::operator<(const Message& aMessage)
+	const Message& Message::operator>(const Message& aMessage)
 };

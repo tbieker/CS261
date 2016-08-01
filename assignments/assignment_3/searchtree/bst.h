@@ -33,4 +33,6 @@ public:
 
     BST operator=(const BST& tree);
 	
+	save(string pathname); //save messages of tree into file
+	
 };

@@ -11,7 +11,7 @@ Email::Email(){
 	return;
 }
 
-Email::Email(const string newName, const string newDomain){
+Email::Email(const string dest, const string src){
 	this.name = newName;
 	this.domain = newDomain;
 	return;
@@ -22,6 +22,6 @@ Email::~Email(){
 }
 
 void Email::print() const{
-	cout << "To: " << toName << '@' << toDomain << endl;
-	cout << "From: " << fromName << '@ << fromDomain << endl;
+	cout << "To: " << destination << endl;
+	cout << "From: " << source << endl;
 }
