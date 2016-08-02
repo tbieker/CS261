@@ -17,7 +17,8 @@ int main()
          << "After duplicating root: " << endl
          << "**************************************************************";
     display(newRoot);
-    cout << "**************************************************************";
+    cout << "**************************************************************"
+         << endl;
 
     int target;
     cout << "Enter target to remove: ";
@@ -25,12 +26,13 @@ int main()
 
     remove(newRoot, target);
     cout << endl
-         << "After removing: " << target << endl;
+         << "After removing: " << target << endl
          << "**************************************************************";
          display(newRoot);
          cout << "**************************************************************";
 
     display(root);
     destroy(root);
+    destroy(newRoot);
     return 0;
 }

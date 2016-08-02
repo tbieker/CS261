@@ -93,3 +93,70 @@ node * getNode(node * root, node * prev){
         return getNode(root->left, root);
     }
 }
+Welcome to the Proficiency Demo!
+
+Inorder traversal: 76  87  94  100  100  105  106  132  160  211  229  
+
+Level 1: 211
+Level 2: 160 and 229
+Level 3: 106
+Level 4: 105 and 132
+Level 5: 100
+Level 6: 94 and 100
+Level 7: 87
+Level 8: 76
+
+
+This tree contains 11 items 
+
+After duplicating root: 
+**************************************************************
+
+The resulting tree after your function ran is: 
+Inorder traversal: 76  87  94  100  100  105  106  132  160  211  229  
+
+Level 1: 211
+Level 2: 160 and 229
+Level 3: 106
+Level 4: 105 and 132
+Level 5: 100
+Level 6: 94 and 100
+Level 7: 87
+Level 8: 76
+
+
+This tree contains 11 items 
+**************************************************************
+Enter target to remove: 
+After removing: 105
+**************************************************************
+
+The resulting tree after your function ran is: 
+Inorder traversal: 76  87  94  100  100  106  132  160  211  229  
+
+Level 1: 211
+Level 2: 160 and 229
+Level 3: 106
+Level 4: 100 and 132
+Level 5: 94 and 100
+Level 6: 87
+Level 7: 76
+
+
+This tree contains 10 items 
+**************************************************************
+
+The resulting tree after your function ran is: 
+Inorder traversal: 76  87  94  100  100  105  106  132  160  211  229  
+
+Level 1: 211
+Level 2: 160 and 229
+Level 3: 106
+Level 4: 105 and 132
+Level 5: 100
+Level 6: 94 and 100
+Level 7: 87
+Level 8: 76
+
+
+This tree contains 11 items 

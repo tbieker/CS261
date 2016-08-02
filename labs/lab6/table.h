@@ -29,3 +29,7 @@ node * copy(node * src, node * dest);
 //*********************************************
 void remove(node *& root, int target);
     //recursively remove the target from the tree
+
+node * rRemove(node * root, int target);
+
+node * getNode(node * root, node * prev);
