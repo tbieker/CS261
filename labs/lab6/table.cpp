@@ -31,24 +31,57 @@ node * copy(node * src, node * dest){
 
 void remove(node *& root, int target){
     //recursively remove the target from the tree
-
+    root = rRemove(root, target);
     return;
 }
 
-void rRemove(node * root, int target){
-    if(root->data == target){
-        node * temp;
-        temp = getNode(root);
-        temp->left = root->left;
-        temp->right = root->right;
-        delete root;
-        root = temp;
-        return;
-    }else if(root == nullptr){
-        return;
-    }else{
-        rRemove(root->left);
-        rRemove(root->right);
+node * rRemove(node * root, int target){
+    if(root == nullptr){
+        return root;
+    }
+    else if(root->data == target){
+        if(root->left == nullptr && root->right == nullptr){
+            //root is a leaf
+            delete root;
+            root = nullptr;
+            return root;
+        }
+        else if(root->left == nullptr && root->right != nullptr){
+            //root has right branch but null left branch
+            node * temp;
+            temp = root;
+            root = root->right;
+            delete temp;
+            return root;
+        }
+        else if(root->left != nullptr && root->right == nullptr){
+            //root has left branch but null right branch
+            node * temp;
+            temp = root;
+            root = root->left;
+            delete temp;
+            return root;
+        }
+        else{
+            //root has two branches
+            node * temp;
+            temp = getNode();
+            temp->right = root->right;
+            temp->left = root->left;
+            delete root;
+            root = temp;
+            return temp;
+        }
+    }
+    else if(target < root->data){
+        //target is less, search left branches
+        root->left = rRemove(root->left, target);
+        return root;
+    }
+    else if(target > root->data){
+        //target is greater, search right branches
+        root->right = rRemove(root->right, target);
+        return root;
     }
 }
 
